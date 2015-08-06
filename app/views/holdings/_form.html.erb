@@ -1,0 +1,26 @@
+<%= form_for @holding, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :portfolio_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :portfolio_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :stock_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :stock_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :quantity, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :quantity, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                holdings_path, :class => 'btn' %>
+  </div>
+<% end %>
