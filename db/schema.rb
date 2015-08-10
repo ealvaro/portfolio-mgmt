@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140620160311) do
 
   create_table "holdings", force: :cascade do |t|
+
     t.integer  "portfolio_id"
     t.integer  "stock_id"
     t.integer  "quantity"
@@ -21,12 +22,14 @@ ActiveRecord::Schema.define(version: 20140620160311) do
     t.datetime "updated_at"
   end
 
+
   create_table "portfolios", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.string   "ssn",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 
   create_table "stocks", force: :cascade do |t|
     t.string   "symbol",     limit: 255

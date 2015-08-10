@@ -1,15 +1,18 @@
 class HoldingsController < ApplicationController
+
   before_action :set_holding, only: [:show, :edit, :update, :destroy]
 
   # GET /holdings
   # GET /holdings.json
   def index
     @holdings = Holding.all
+
   end
 
   # GET /holdings/1
   # GET /holdings/1.json
   def show
+
   end
 
   # GET /holdings/new
@@ -19,6 +22,7 @@ class HoldingsController < ApplicationController
 
   # GET /holdings/1/edit
   def edit
+
   end
 
   # POST /holdings

@@ -15,4 +15,3 @@ Holding.create(portfolio: joe, stock: orcl, quantity: 100)
 Holding.create(portfolio: joe, stock: intc, quantity: 100)
 Holding.create(portfolio: jane, stock: goog, quantity: 200)
 Holding.create(portfolio: jane, stock: orcl, quantity: 200)
-
