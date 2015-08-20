@@ -2,59 +2,59 @@
 
 Follow these instructions to get the application up and running.
 
-* Ruby version
-** 2.2
-* System dependencies
-**
-** rails new portfolio-mgmt
-** cd portfolio-mgmt
+# Ruby version
+## 2.2
+# System dependencies
+##
+## rails new portfolio-mgmt
+## cd portfolio-mgmt
 
-** #Add to gemfile 
-** gem 'therubyracer'
-** gem 'less-rails'
-** gem 'twitter-bootstrap-rails'
+## #Add to gemfile 
+## gem 'therubyracer'
+## gem 'less-rails'
+## gem 'twitter-bootstrap-rails'
 
-** bundle install
-** rails g bootstrap:install
-** rails g bootstrap:layout application fixed
-** rails g rspec:install  (optionally delete /test)
+## bundle install
+## rails g bootstrap:install
+## rails g bootstrap:layout application fixed
+## rails g rspec:install  (optionally delete /test)
 
-** rails g scaffold portfolio name:string ssn:string
-** rails g scaffold stock symbol:string name:string price:float
-** rails g scaffold holding portfolio_id:integer stock_id:integer quantity:integer
+## rails g scaffold portfolio name:string ssn:string
+## rails g scaffold stock symbol:string name:string price:float
+## rails g scaffold holding portfolio_id:integer stock_id:integer quantity:integer
 
-** #create relations in Holding
-**   belongs_to :portfolio
-**   belongs_to :stock
-** #create relations in Portfolio
-**     has_many :holdings, :dependent => :destroy
-** #create relations in Stock
-**   has_many :stocks, :through => :holdings
-**   has_many :holdings
+## #create relations in Holding
+##   belongs_to :portfolio
+##   belongs_to :stock
+## #create relations in Portfolio
+##     has_many :holdings, :dependent => :destroy
+## #create relations in Stock
+##   has_many :stocks, :through => :holdings
+##   has_many :holdings
   
-** #added some spec tests.
-** #remove public/index.html
-** rails generate controller Pages home
+## #added some spec tests.
+## #remove public/index.html
+## rails generate controller Pages home
 
-** bundle exec rake assets:precompile
+## bundle exec rake assets:precompile
 
-** rails g bootstrap:themed portfolios -f
-** rails g bootstrap:themed stocks -f
-** rails g bootstrap:themed holdings -f
+## rails g bootstrap:themed portfolios -f
+## rails g bootstrap:themed stocks -f
+## rails g bootstrap:themed holdings -f
 
-* Database creation
-** rake db:migrate
-** rails s
+# Database creation
+## rake db:migrate
+## rails s
 
-* Database initialization
+# Database initialization
 
-* How to run the test suite
+# How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+# Deployment instructions
 
-* ...
+# ...
 
 
 Please feel free to use a different markup language if you do not plan to run

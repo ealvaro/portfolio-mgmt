@@ -17,8 +17,8 @@
     <% @holdings.each do |holding| %>
       <tr>
         <td><%= link_to holding.id, holding_path(holding) %></td>
-        <td><%= holding.portfolio.name %></td>
-        <td><%= holding.stock.symbol %></td>
+        <td><%= holding.portfolio.name if holding.portfolio %></td>
+        <td><%= holding.stock.symbol if holding.stock %></td>
         <td><%= holding.quantity %></td>
         <td><%= holding.created_at.to_time.strftime('%B %e at %l:%M %p') %></td>
         <td>
