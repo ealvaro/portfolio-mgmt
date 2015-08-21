@@ -68,3 +68,7 @@ rails s
 
 #added full names to lists
 <td><%= holding.portfolio.name if holding.portfolio %></td>
+#added user and authentication
+rails g scaffold user first_name:string last_name:string dob:date email:string address:string city:string state:string password_digest:string
+#added user relationship to portfolio
+rails g migration add_user_id_to_portfolio user_id:int
