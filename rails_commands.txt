@@ -40,35 +40,39 @@ bundle install
 rails g bootstrap:install
 rails g bootstrap:layout application fixed
 
-rails g scaffold portfolio name:string ssn:string
-rails g scaffold stock symbol:string name:string price:float
-rails g scaffold holding portfolio_id:integer stock_id:integer quantity:integer
+# create main entities
+	rails g scaffold portfolio name:string ssn:string
+	rails g scaffold stock symbol:string name:string price:float
+	rails g scaffold holding portfolio_id:integer stock_id:integer quantity:integer
 
 #create relations in Holding
-  belongs_to :portfolio
-  belongs_to :stock
+	belongs_to :portfolio
+	belongs_to :stock
 #create relations in Portfolio
     has_many :holdings, :dependent => :destroy
 #create relations in Stock
-  has_many :stocks, :through => :holdings
-  has_many :holdings
+	has_many :stocks, :through => :holdings
+	has_many :holdings
   
 #remove public/index.html
-rails generate controller Pages home
+	rails generate controller Pages home
 
-git clone git://github.com/twitter/bootstrap.git
+	git clone git://github.com/twitter/bootstrap.git
 #copy bootstrap.css and .js in portfolio-mgmt/assets
-bundle exec rake assets:precompile
-
-rails g bootstrap:themed portfolios -f
-rails g bootstrap:themed stocks -f
-rails g bootstrap:themed holdings -f
-rake db:reset --trace
-rails s
+	bundle exec rake assets:precompile
+#add bootstrap look and feel
+	rails g bootstrap:themed portfolios -f
+	rails g bootstrap:themed stocks -f
+	rails g bootstrap:themed holdings -f
+	rake db:reset --trace
+	rails s
 
 #added full names to lists
-<td><%= holding.portfolio.name if holding.portfolio %></td>
+	<td><%= holding.portfolio.name if holding.portfolio %></td>
 #added user and authentication
-rails g scaffold user first_name:string last_name:string dob:date email:string address:string city:string state:string password_digest:string
+	rails g scaffold user first_name:string last_name:string dob:date email:string address:string city:string state:string password_digest:string
 #added user relationship to portfolio
-rails g migration add_user_id_to_portfolio user_id:int
+	rails g migration add_user_id_to_portfolio user_id:int
+	belongs_to :user
+#add bootstrap look and feel
+	rails g bootstrap:themed users -f
