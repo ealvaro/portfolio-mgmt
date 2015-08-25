@@ -1,5 +1,5 @@
 class StocksController < ApplicationController
-
+  before_filter :authorize
   before_action :set_stock, only: [:show, :edit, :update, :destroy]
 
   # GET /stocks

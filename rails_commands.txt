@@ -76,3 +76,9 @@ rails g bootstrap:layout application fixed
 	belongs_to :user
 #add bootstrap look and feel
 	rails g bootstrap:themed users -f
+#create a session controller
+	rails g controller session new create destroy
+#added these routes
+	get '/login' => 'session#new'
+	post '/login' => 'session#create'
+	get '/logout' => 'session#destroy'

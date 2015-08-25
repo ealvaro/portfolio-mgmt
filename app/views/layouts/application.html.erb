@@ -60,6 +60,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
+        <% if current_user %>
+          Signed in as <%= current_user.fullname %> | <%= link_to "Logout", '/logout' %>
+        <% else %>
+          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+        <% end %>          
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
