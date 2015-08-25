@@ -1,5 +1,5 @@
 class HoldingsController < ApplicationController
-
+  before_filter :authorize
   before_action :set_holding, only: [:show, :edit, :update, :destroy]
 
   # GET /holdings
