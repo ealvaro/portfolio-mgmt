@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 	validates :password,:length => { :minimum => 8 }
 	validates_confirmation_of :password
 	validates :email, presence: true, allow_nil: false, uniqueness: {scope: :email}
+    has_many :portfolios
 
 	def fullname
 		first_name + ' ' + last_name
