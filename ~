@@ -1,0 +1,9 @@
+dead_people = [
+  "Ethel", "Mortimer", "Buford"
+]
+
+alive_people = [
+  "Kelly", "Joe", "Megan"
+]
+
+puts dead_people.include? "Mortimer"

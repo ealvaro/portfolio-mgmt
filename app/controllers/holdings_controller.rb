@@ -5,7 +5,7 @@ class HoldingsController < ApplicationController
   # GET /holdings
   # GET /holdings.json
   def index
-    @holdings = Holding.all
+    @holdings = Holding.where(portfolio_id: params[:portfolio_id])
 
   end
 

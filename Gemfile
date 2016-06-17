@@ -34,6 +34,12 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'minitest-rails', '>= 1.0'
+
+  # To display ERD make sure to run the following from the console
+  # bundle exec erd
+  # make sure you have graphviz libraries installed.
+  gem 'rails-erd'
+
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

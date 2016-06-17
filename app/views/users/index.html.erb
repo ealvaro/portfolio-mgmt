@@ -19,7 +19,7 @@
   </thead>
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <tr onclick="location.href='<%= portfolios_path %>'">
         <td><%= link_to user.id, user_path(user) %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
