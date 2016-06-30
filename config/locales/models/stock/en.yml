@@ -1,0 +1,8 @@
+en:
+  models:
+    stock:
+      created_at: "Created At"
+      symbol: "Symbol"
+      name: "Stock Name"
+      id: "Id"
+      price: "Acquired Price"

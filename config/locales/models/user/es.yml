@@ -1,0 +1,12 @@
+es:
+  models:
+    user:
+      created_at: "Creado"
+      dob: "Fecha Nacimiento"
+      first_name: "Nombre"
+      last_name: "Apellido"
+      id: "Id"
+      email: "Correo Electronico"
+      address: "Direccion"
+      city: "Ciudad"
+      state: "Estado"

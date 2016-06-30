@@ -1,0 +1,11 @@
+en:
+  models:
+    user:
+      created_at: "Created At"
+      dob: "Date of Birth"
+      first_name: "First Name"
+      last_name: "Last Name"
+      id: "Id"
+      email: "Email"
+      address: "Address"
+      state: "State"

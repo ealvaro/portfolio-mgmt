@@ -1,0 +1,8 @@
+es:
+  models:
+    holding:
+      created_at: "Creado"
+      quantity: "Cantidad"
+      id: "Id"
+      portfolio_id: "Portafolio"
+      stock_id: "Valor"

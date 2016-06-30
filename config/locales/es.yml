@@ -19,10 +19,10 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  PortfolioMgmt: "Portfolio Management"
-  portfolio: "Portfolio"
-  holding: "Holding"
-  stock: "Stock"
-  user: "User"
+es:
+  hello: "Hola mundo"
+  PortfolioMgmt: "Manejo de Cartera"
+  portfolio: "Portafolio"
+  holding: "Cartera"
+  stock: "Valor"
+  user: "Usuario"

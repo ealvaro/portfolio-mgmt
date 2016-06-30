@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -14,7 +15,7 @@ class ApplicationController < ActionController::Base
       redirect_to new_session_path, warning: "Please sign in to carry on"
     end
   end
-  
+
   hide_action :authenticate_user!
 
   def current_user
@@ -31,6 +32,10 @@ class ApplicationController < ActionController::Base
 
   def redirect_user
     redirect_to '/404'
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 
 end

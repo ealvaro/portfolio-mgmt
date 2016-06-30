@@ -5,15 +5,15 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:first_name) %></th>
-      <th><%= model_class.human_attribute_name(:last_name) %></th>
-      <th><%= model_class.human_attribute_name(:dob) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
-      <th><%= model_class.human_attribute_name(:city) %></th>
-      <th><%= model_class.human_attribute_name(:state) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= t("models.user.id", :default => model_class.human_attribute_name(:id)) %></th>
+      <th><%= t("models.user.first_name", :default => model_class.human_attribute_name(:first_name)) %></th>
+      <th><%= t("models.user.last_name", :default => model_class.human_attribute_name(:last_name)) %></th>
+      <th><%= t("models.user.dob", :default => model_class.human_attribute_name(:dob)) %></th>
+      <th><%= t("models.user.email", :default => model_class.human_attribute_name(:email)) %></th>
+      <th><%= t("models.user.address", :default => model_class.human_attribute_name(:address)) %></th>
+      <th><%= t("models.user.city", :default => model_class.human_attribute_name(:city)) %></th>
+      <th><%= t("models.user.state", :default => model_class.human_attribute_name(:state)) %></th>
+      <th><%= t("models.user.created_at", :default => model_class.human_attribute_name(:created_at)) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -46,3 +46,4 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_user_path,
             :class => 'btn btn-primary' %>
+            t("models.user.last_name", :default =>

@@ -5,10 +5,10 @@
 <table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:ssn) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t "models.portfolio.id" %></th>
+      <th><%=t "models.portfolio.name" %></th>
+      <th><%=t "models.portfolio.ssn" %></th>
+      <th><%=t "models.portfolio.created_at" %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>

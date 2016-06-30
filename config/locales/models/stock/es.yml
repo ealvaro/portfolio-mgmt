@@ -1,0 +1,8 @@
+es:
+  models:
+    stock:
+      created_at: "Creado"
+      symbol: "Simbolo"
+      name: "Nombre"
+      id: "Id"
+      price: "Valor compra"

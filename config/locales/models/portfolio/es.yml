@@ -1,0 +1,7 @@
+es:
+  models:
+    portfolio:
+      created_at: "Creado"
+      ssn: "Seguro Social"
+      name: "Nombre"
+      id: "Id"

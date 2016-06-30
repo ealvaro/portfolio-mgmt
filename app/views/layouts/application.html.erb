@@ -45,13 +45,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">PortfolioMgmt</a>
+        <a class="navbar-brand" href="#"><%= t 'PortfolioMgmt'%></a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Users", users_path()  %></li>
-            <li><%= link_to "Portfolios", portfolios_path()  %></li>
-            <li><%= link_to "Holdings", holdings_path()  %></li>
-            <li><%= link_to "Stocks", stocks_path()  %></li>
+            <li><%= link_to t("user").pluralize, users_path()  %></li>
+            <li><%= link_to t("portfolio").pluralize, portfolios_path()  %></li>
+            <li><%= link_to t("holding").pluralize, holdings_path()  %></li>
+            <li><%= link_to t("stock").pluralize, stocks_path()  %></li>
           </ul>
         </div>
       </div>
@@ -64,7 +64,7 @@
           Signed in as <%= current_user.fullname %> | <%= link_to "Logout", '/logout' %>
         <% else %>
           <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-        <% end %>          
+        <% end %>
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
@@ -73,10 +73,10 @@
             <h3>Menu</h3>
             <ul class="nav nav-list">
               <li class="nav-header"></li>
-              <li><%= link_to "Users", users_path()  %></li>
-              <li><%= link_to "Portfolios", portfolios_path()  %></li>
-              <li><%= link_to "Holdings", holdings_path()  %></li>
-              <li><%= link_to "Stocks", stocks_path()  %></li>
+              <li><%= link_to t("user").pluralize, users_path()  %></li>
+              <li><%= link_to t("portfolio").pluralize, portfolios_path()  %></li>
+              <li><%= link_to t("holding").pluralize, holdings_path()  %></li>
+              <li><%= link_to t("stock").pluralize, stocks_path()  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

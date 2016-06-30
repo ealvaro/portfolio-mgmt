@@ -1,0 +1,7 @@
+en:
+  models:
+    portfolio:
+      created_at: "Created At"
+      ssn: "Social Security Number"
+      name: "Name"
+      id: "Identification"

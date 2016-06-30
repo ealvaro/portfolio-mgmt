@@ -11,7 +11,7 @@ rails new portfolio-mgmt
 cd portfolio-mgmt
 ```
 
-### Add to gemfile 
+### Add to gemfile
 ```ruby
 gem 'therubyracer'
 gem 'less-rails'
@@ -44,7 +44,7 @@ in Stock
 ```ruby
     has_many :stocks, :through => :holdings
     has_many :holdings
-```  
+```
 remove public/index.html and create a Home Page
 ```shell
 rails generate controller Pages home
@@ -55,6 +55,7 @@ rails g bootstrap:themed holdings -f
 ```
 ### Database creation and migration
 ```shell
+rake db:create
 rake db:migrate
 ```
 ### Adding test data
@@ -110,17 +111,26 @@ goog = Stock.create(symbol: 'GOOG', name: 'Google Inc.', price: 557.0)
 orcl = Stock.create(symbol: 'ORCL', name: 'Oracle Inc.', price: 41.0)
 intc = Stock.create(symbol: 'INTC', name: 'Intel Corp.', price: 31.0)
 ret = Portfolio.create(user: joe, name: 'Joe Retirement', ssn: '123-45-6789')
-inv = Portfolio.create(user: jane, name: 'Jane Investment', ssn: '987-65-4321')
+inv1 = Portfolio.create(user: jane, name: 'Jane Investment', ssn: '987-65-4321')
+inv2 = Portfolio.create(user: joe, name: 'Joe Investment', ssn: '123-45-6789')
 Holding.create(portfolio: ret, stock: goog, quantity: 100)
 Holding.create(portfolio: ret, stock: orcl, quantity: 100)
 Holding.create(portfolio: ret, stock: intc, quantity: 100)
-Holding.create(portfolio: inv, stock: goog, quantity: 200)
-Holding.create(portfolio: inv, stock: orcl, quantity: 200)
+Holding.create(portfolio: inv1, stock: goog, quantity: 200)
+Holding.create(portfolio: inv1, stock: orcl, quantity: 200)
+Holding.create(portfolio: inv2, stock: goog, quantity: 80)
+Holding.create(portfolio: inv2, stock: orcl, quantity: 80)
+Holding.create(portfolio: inv2, stock: intc, quantity: 80)
 ```
+
+Internationalization Concern
+-------------
+Create config/locales/es.bootstrap.yml file
+
 
 Tests Concern
 -------------
-Add test data 
+Add test data
 ### How to run the test suite
 
 ### Services (job queues, cache servers, search engines, etc.)
@@ -130,4 +140,4 @@ Add test data
 ### ...more to come
 
 
-Please feel free to use this project as an introduction to a Ruby on Rails tutorial, touching different concerns you will need to implement out there in the real world as a developer. 
+Please feel free to use this project as an introduction to a Ruby on Rails tutorial, touching different concerns you will need to implement out there in the real world as a developer.

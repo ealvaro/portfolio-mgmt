@@ -1,0 +1,6 @@
+en:
+  models:
+    holding:
+      created_at: "Created At"
+      quantity: "Quantity"
+      id: "Id"
