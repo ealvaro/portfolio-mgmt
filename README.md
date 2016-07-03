@@ -131,11 +131,11 @@ Create the following files:
 ```
 files for bootstrap specific translations
 ```shell
-config/locales/models/portfolio/en.yml & es.yml
+	config/locales/models/portfolio/en.yml & es.yml
 ```
 files for Portfolio model's attributes translations. Do the same for all the models.
 ```shell
-config/locales/views/portfolios/en.yml & es.yml
+	config/locales/views/portfolios/en.yml & es.yml
 ```
 files for Portfolio view's special tag translations.  Do the same for all the views of all your models.
 		
