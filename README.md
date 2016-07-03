@@ -125,8 +125,11 @@ Holding.create(portfolio: inv2, stock: intc, quantity: 80)
 
 Internationalization Concern
 -------------
-Create config/locales/es.bootstrap.yml file
-
+Create the following files:
+	config/locales/es.bootstrap.yml & es.bootstrap.yml files for bootstrap specific translations
+	config/locales/models/portfolio/en.yml & es.yml files for Portfolio model's attributes translations. Do the same for all the models.
+	config/locales/views/portfolios/en.yml & es.yml files for Portfolio view's special tag translations.  Do the same for all the views of all your models.
+		
 
 Tests Concern
 -------------
