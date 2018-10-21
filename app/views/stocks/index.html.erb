@@ -5,11 +5,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:symbol) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:price) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= t("models.stock.id", :default => model_class.human_attribute_name(:id)) %></th>
+      <th><%= t("models.stock.symbol", :default => model_class.human_attribute_name(:symbol)) %></th>
+      <th><%= t("models.stock.name", :default => model_class.human_attribute_name(:name)) %></th>
+      <th><%= t("models.stock.price", :default => model_class.human_attribute_name(:price)) %></th>
+      <th><%= t("models.stock.created_at", :default => model_class.human_attribute_name(:created_at)) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>

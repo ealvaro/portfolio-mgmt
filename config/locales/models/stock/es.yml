@@ -4,5 +4,5 @@ es:
       created_at: "Creado"
       symbol: "Simbolo"
       name: "Nombre"
-      id: "Id"
+      id: "Numero"
       price: "Valor compra"
