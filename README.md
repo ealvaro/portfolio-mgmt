@@ -2,7 +2,7 @@ About Portfolio Management Project
 ==========================
 
 Back in 2012 I was asked by a potential employer to create in a couple of days a very simple, quick Ruby on Rails website demonstrating stocks, users and their portfolios using bootstrap look and feel.  It actually took me several days to complete it, but now i have transformed it into a tutorial on how to build a Ruby on Rails project from scratch, with all kinds of concerns; authentication, authorization, testing, etc. This is the project I came up with.
-Follow these instructions to get the application up and running. Make sure Ruby is ~> 2.2 and Rails is ~> 4.2.3
+Follow these instructions to get the application up and running. Make sure Ruby is ~> 2.2.5 and Rails is ~> 4.1.16
 
 Setup
 -----
@@ -110,12 +110,14 @@ jane = User.create(first_name: 'Jane', last_name: 'Doe', dob: '1958-05-05', emai
 goog = Stock.create(symbol: 'GOOG', name: 'Google Inc.', price: 557.0)
 orcl = Stock.create(symbol: 'ORCL', name: 'Oracle Inc.', price: 41.0)
 intc = Stock.create(symbol: 'INTC', name: 'Intel Corp.', price: 31.0)
+appl = Stock.create(symbol: 'APPL', name: 'Apple Inc.',  price: 75.0)
 ret = Portfolio.create(user: joe, name: 'Joe Retirement', ssn: '123-45-6789')
 inv1 = Portfolio.create(user: jane, name: 'Jane Investment', ssn: '987-65-4321')
 inv2 = Portfolio.create(user: joe, name: 'Joe Investment', ssn: '123-45-6789')
 Holding.create(portfolio: ret, stock: goog, quantity: 100)
 Holding.create(portfolio: ret, stock: orcl, quantity: 100)
 Holding.create(portfolio: ret, stock: intc, quantity: 100)
+Holding.create(portfolio: ret, stock: appl, quantity: 100)
 Holding.create(portfolio: inv1, stock: goog, quantity: 200)
 Holding.create(portfolio: inv1, stock: orcl, quantity: 200)
 Holding.create(portfolio: inv2, stock: goog, quantity: 80)
@@ -125,8 +127,20 @@ Holding.create(portfolio: inv2, stock: intc, quantity: 80)
 
 Internationalization Concern
 -------------
-Create config/locales/es.bootstrap.yml file
-
+Create the following files:
+```shell
+	config/locales/es.bootstrap.yml & es.bootstrap.yml
+```
+files for bootstrap specific translations
+```shell
+	config/locales/models/portfolio/en.yml & es.yml
+```
+files for Portfolio model's attributes translations. Do the same for all the models.
+```shell
+	config/locales/views/portfolios/en.yml & es.yml
+```
+files for Portfolio view's special tag translations.  Do the same for all the views of all your models.
+		
 
 Tests Concern
 -------------
