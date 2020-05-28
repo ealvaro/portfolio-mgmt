@@ -3,4 +3,5 @@ en:
     holding:
       created_at: "Created At"
       quantity: "Quantity"
+      price: "Market Value"
       id: "Id"

@@ -3,6 +3,7 @@ es:
     holding:
       created_at: "Creado"
       quantity: "Cantidad"
+      price: "Valor Mercado"
       id: "Id"
       portfolio_id: "Portafolio"
       stock_id: "Valor"

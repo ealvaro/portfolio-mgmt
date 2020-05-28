@@ -9,6 +9,7 @@
       <th><%= t("models.holding.portfolio_id", :default => model_class.human_attribute_name(:portfolio_id)) %></th>
       <th><%= t("models.holding.stock_id", :default => model_class.human_attribute_name(:stock_id)) %></th>
       <th><%= t("models.holding.quantity", :default => model_class.human_attribute_name(:quantity)) %></th>
+      <th><%= t("models.holding.price") %></th>
       <th><%= t("models.holding.created_at", :default => model_class.human_attribute_name(:created_at)) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -20,6 +21,7 @@
         <td><%= holding.portfolio.name if holding.portfolio %></td>
         <td><%= holding.stock.symbol if holding.stock %></td>
         <td><%= holding.quantity %></td>
+        <td><%= holding.quantity * holding.stock.price %></td>
         <td><%= holding.created_at.to_time.strftime('%B %e at %l:%M %p') %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

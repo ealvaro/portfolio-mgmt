@@ -1,5 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
-
+# test/fixtures/stocks.yml
 one:
   symbol: MyString
   name: MyString

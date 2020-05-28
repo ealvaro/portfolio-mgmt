@@ -3,6 +3,6 @@ es:
     stock:
       created_at: "Creado"
       symbol: "Simbolo"
-      name: "Nombre"
+      name: "Valor Nombre"
       id: "Id"
       price: "Valor compra"
