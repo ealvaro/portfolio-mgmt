@@ -39,6 +39,7 @@ group :development, :test do
   # bundle exec erd
   # make sure you have graphviz libraries installed.
   gem 'rails-erd'
+  gem 'ruby-graphviz', '1.2.2'
 
 end
 # Use ActiveModel has_secure_password
