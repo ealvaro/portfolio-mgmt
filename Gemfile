@@ -7,7 +7,7 @@ gem 'twitter-bootstrap-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.1.16'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '1.3.10'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +33,7 @@ group :development, :test do
   gem 'spring', '~> 1.0'
   gem 'pry'
   gem 'pry-nav'
-  gem 'minitest-rails', '>= 1.0'
+  gem 'minitest'
 
   # To display ERD make sure to run the following from the console
   # bundle exec erd

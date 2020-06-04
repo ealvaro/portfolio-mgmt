@@ -3,7 +3,9 @@
 one:
   name: MyString
   ssn: MyString
+  user: :one
 
 two:
   name: MyString
   ssn: MyString
+  user: :two
