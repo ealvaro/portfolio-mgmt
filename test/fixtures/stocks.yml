@@ -1,10 +1,10 @@
 # test/fixtures/stocks.yml
-one:
+one_stock:
   symbol: MyString
   name: MyString
   price: 1.5
 
-two:
+two_stock:
   symbol: MyString
   name: MyString
   price: 1.5

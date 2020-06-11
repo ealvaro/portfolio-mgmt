@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
+one_port:
   name: MyString
   ssn: MyString
   user: :one
 
-two:
+two_port:
   name: MyString
   ssn: MyString
   user: :two

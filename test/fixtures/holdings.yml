@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  portfolio_id: 1
-  stock_id: 1
+  portfolio: :one-port
+  stock: :one_stock
   quantity: 1
 
 two:
-  portfolio_id: 1
-  stock_id: 1
+  portfolio: :two-port
+  stock: :two_stock
   quantity: 1
