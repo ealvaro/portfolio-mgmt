@@ -29,10 +29,15 @@ jobs:
       uses: actions/setup-ruby@v1
 
     # Runs a set of commands using the runners shell
-    - name: Install dependencies
+    - name: Install Bundler
       run: 
         gem install bundler
+    - name: Install Dependencies
+      run: 
         bundle install --jobs 4 --retry 3
+    - name: Install DB
+      run: 
         bundle exec rails db:setup
     - name: Run tests
-      run: bundle exec rails test
+      run:
+        bundle exec rails test
