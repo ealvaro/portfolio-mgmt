@@ -28,7 +28,7 @@ jobs:
     - name: Setup Ruby
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.3.8
+        ruby-version: 2.3.x
 
         # Runs a set of commands using the runners shell
     - name: Install dependencies
