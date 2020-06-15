@@ -31,10 +31,10 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Install Bundler
       run: 
-        gem install bundler
+        gem install bundle
     - name: Install Dependencies
       run: 
-        bundle install --jobs 4 --retry 3
+        bundle install update --jobs 4 --retry 3
     - name: Install DB
       run: 
         bundle exec rails db:setup
