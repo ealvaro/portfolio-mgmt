@@ -31,7 +31,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Install Bundler
       run: 
-        gem install bundler '1.16.2'
+        gem install bundler
     - name: Install Dependencies
       run: 
         bundle install --jobs 4 --retry 3
