@@ -29,12 +29,9 @@ jobs:
       with:
         ruby-version: '2.4'
     # Runs a set of commands using the runners shell
-    - name: Install Bundler
-      run: 
-        gem install bundle
     - name: Install Dependencies
       run: 
-        bundle update --jobs 4 --retry 3
+        bundle install --jobs 4 --retry 3
     - name: Install DB
       run: 
         bundle exec rails db:setup
