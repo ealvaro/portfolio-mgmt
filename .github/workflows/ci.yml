@@ -34,7 +34,7 @@ jobs:
         gem install bundle
     - name: Install Dependencies
       run: 
-        bundle install update --jobs 4 --retry 3
+        bundle update --jobs 4 --retry 3
     - name: Install DB
       run: 
         bundle exec rails db:setup
